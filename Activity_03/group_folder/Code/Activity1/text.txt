@@ -1,0 +1,9 @@
+Our learning goal is php, and for example the below details from the database
+can be verified. 
+
+$email = "someone@gmail.com"; 
+$password = "password123"; 
+
+we can check the login input in php.
+
+

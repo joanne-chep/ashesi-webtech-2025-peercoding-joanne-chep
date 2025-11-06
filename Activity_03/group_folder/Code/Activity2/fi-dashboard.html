@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Faculty Intern Dashboard</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Navigation -->
+  <nav class="navbar">
+    <h1 class="logo">Ashesi Attendance</h1>
+    <ul class="nav-links">
+      <li><a href="#">Courses</a></li>
+      <li><a href="#">Sessions</a></li>
+      <li><a href="#">Observers</a></li>
+      <li><a href="file.html" onclick="logout()">Logout</a></li>
+    </ul>
+  </nav>
+
+  <!-- Dashboard -->
+  <main class="dashboard-container">
+    <h2 id="welcomeMessage"></h2>
+
+    <div class="grid-container">
+      <div class="card">
+        <h3>My Courses</h3>
+        <ul id="courseList"></ul>
+      </div>
+
+      <div class="card">
+        <h3>Class Sessions</h3>
+        <ul id="sessionList"></ul>
+      </div>
+
+      <div class="card">
+        <h3>Auditors</h3>
+        <ul id="auditorList"></ul>
+      </div>
+
+      <div class="card">
+        <h3>Observers</h3>
+        <ul id="observerList"></ul>
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <p>&copy; 2025 Ashesi University | Faculty Intern Dashboard</p>
+  </footer>
+
+  <script>
+    const currentUser = JSON.parse(localStorage.getItem("currentUser"));
+
+    if (!currentUser || currentUser.role !== "fi") {
+      alert("Access denied. Please log in as a Faculty Intern.");
+      window.location.href = "index.html";
+    } else {
+      document.getElementById("welcomeMessage").textContent =
+        "Welcome, " + currentUser.name + " 👋";
+    }
+
+    
+    const dashboardData = {
+      courses: ["Introduction to Computing", "Data Structures", "Web Development"],
+      sessions: ["Week 1 - Attendance", "Week 2 - Lab Participation", "Week 3 - Quiz Prep"],
+      auditors: ["James K.", "Mary A.", "Kofi T."],
+      observers: ["Abena O.", "Kwame N."]
+    };
+
+
+    function loadDashboardData() {
+      document.getElementById("courseList").innerHTML =
+        dashboardData.courses.map(c => `<li>${c}</li>`).join("");
+      document.getElementById("sessionList").innerHTML =
+        dashboardData.sessions.map(s => `<li>${s}</li>`).join("");
+      document.getElementById("auditorList").innerHTML =
+        dashboardData.auditors.map(a => `<li>${a}</li>`).join("");
+      document.getElementById("observerList").innerHTML =
+        dashboardData.observers.map(o => `<li>${o}</li>`).join("");
+    }
+
+    // Logout function
+    function logout() {
+      localStorage.removeItem("currentUser");
+      alert("You have logged out.");
+      window.location.href = "index.html";
+    }
+
+    // Run the function after the page loads
+    loadDashboardData();
+  </script>
+</body>
+</html>

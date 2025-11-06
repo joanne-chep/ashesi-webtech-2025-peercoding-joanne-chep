@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang = "eng">
+<head> 
+    <meta charset = "UTF-8">
+    <meta name = "viewport" content = "width = device-width, initial-scale = 1.0">
+    <title> Ashesi Attendance System</title>
+    <link rel = "stylesheet" href="style.css">
+</head>
+<body>
+    <div class = "container">
+        <h2> Ashesi Login page </h2>
+        <div id = "login-form">
+             <h3>Login</h3>
+             <input type = "email" id = "loginEmail" placeholder = "Email" required>
+             <input type = "password" id = "loginPassword" placeholder = "Password" required>
+            <button onclick = "login()">Login </button>
+            <p> Don't have an account?<a href = "#" onclick ="event.preventDefault();toggleForm('signup')">sign up</a></p>
+        </div>
+        <!--sign up form-->
+        <div id = "signup-form" style = "display: none;">
+            <h3>Sign Up</h3>
+            <input type = "text" id = "signupName" placeholder = "full Name" required>
+            <input type = "text" id = "signupEmail" placeholder = "Email" required>
+            <input type = "password" id = "signupPassword" placeholder = "Password" required>
+
+            <select id = "signupRole">
+                <option value = "student">Student</option>
+                <option value = "fi">Faculty Intern</option>
+                <option value = "faculty">Faculty</option>
+            </select>
+
+            <button onclick = "signup()">Sign Up </button>
+            <p>Already have an account?<a href = "#" onclick ="event.preventDefault();toggleForm('login')">Log In</a></p>
+            </div>
+        </div>
+        <script src="script.js"></script>
+        </body>
+        </html>
