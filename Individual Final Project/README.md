@@ -1,6 +1,8 @@
 #  Serenity - Mental Health & Wellness Platform
 
 **Serenity** is a web-based mental health platform designed to bridge the gap between individuals seeking psychological support and professional therapists. The platform creates a safe, accessible environment for booking therapy sessions, managing appointments, and accessing wellness resources.
+This is the link to the live and hosted website:
+                http://169.239.251.102:341/~joanne.chepkoech/uploads/Mental%20health/PHP/login.php
 
 ## 🚀 Project Overview
 
