@@ -33,7 +33,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
             //Verify the password hash
             if (password_verify($password, $hashed_password)) {
-                //Security: Prevent session fixation
+                //Prevent session fixation
                 session_regenerate_id(true);
                 
                 //Set session variables
@@ -72,7 +72,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
     
     <style>
-        /*Mobile responsiveness adjustments*/
         @media screen and (max-width: 768px) {
             .split-screen {
                 flex-direction: column;

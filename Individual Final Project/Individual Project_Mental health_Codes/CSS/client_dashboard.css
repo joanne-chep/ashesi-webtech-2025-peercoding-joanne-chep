@@ -154,7 +154,6 @@ body {
 }
 .contact-btn:hover { background: #4A7C59; color: white; }
 
-/* Form Styles */
 label { display: block; margin-bottom: 8px; font-size: 13px; font-weight: 600; color: #444; }
 
 input[type="text"], input[type="email"], input[type="password"] {

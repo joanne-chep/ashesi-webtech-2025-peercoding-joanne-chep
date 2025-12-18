@@ -1,21 +1,19 @@
-/* therapist_dashboard.css - Social Media Style (FB/IG Inspired) */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
 
-body { 
-    margin: 0; 
-    font-family: 'Poppins', sans-serif; 
-    background: #F0F2F5; /* Classic Social Media Light Gray */
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background: #F0F2F5;
     color: #050505;
-    display: flex; 
-    flex-direction: column; 
-    min-height: 100vh; 
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
 
-/* --- LAYOUT CONTAINER --- */
 .dashboard-wrapper {
     display: flex;
     flex: 1;
-    max-width: 1200px; /* Slightly tighter for that "Feed" feel */
+    max-width: 1200px;
     margin: 20px auto;
     width: 95%;
     gap: 20px;
@@ -23,10 +21,9 @@ body {
     box-shadow: none;
 }
 
-/* --- SIDEBAR (Like the Left Menu on FB) --- */
 .sidebar {
     width: 280px;
-    background: transparent; /* Blends with background */
+    background: transparent;
     color: #050505;
     display: flex;
     flex-direction: column;
@@ -50,7 +47,7 @@ body {
     color: #050505;
     text-decoration: none;
     transition: all 0.2s ease;
-    border-radius: 8px; /* Rounded pill hover */
+    border-radius: 8px;
     font-size: 15px;
     font-weight: 500;
     border-left: none;

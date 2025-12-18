@@ -22,8 +22,8 @@ $user_id = $_SESSION['user_id'];
 
 //Fetch therapist details
 //We use a left join just in case the therapist_profiles entry is missing
-$query = "SELECT u.full_name, u.email, u.profile_image, tp.* FROM serenity_users u 
-        LEFT JOIN therapist_profiles tp ON u.id = tp.user_id 
+$query = "SELECT u.full_name, u.email, u.profile_image, tp.* FROM serenity_users u
+        LEFT JOIN therapist_profiles tp ON u.id = tp.user_id
         WHERE u.id = $user_id";
 
 $result = $conn->query($query);
