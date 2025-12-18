@@ -132,7 +132,7 @@ function get_status_label($status) {
                 </thead>
                 <tbody>
                     <?php foreach ($records as $row): ?>
-                        <?php 
+                        <?php
                             $status_class = 'status-' . strtolower(get_status_label($row['status']));
                         ?>
                         <tr>

@@ -1,0 +1,190 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+
+body {
+    background-color: #FDFBF7;
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+.dash-header {
+    background: #4A7C59;
+    padding: 50px 20px;
+    color: white;
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.container {
+    max-width: 1100px;
+    margin: -60px auto 30px;
+    padding: 0 20px;
+    display: grid;
+    grid-template-columns: 1fr 2.2fr;
+    gap: 30px;
+}
+
+
+.card {
+    background: white;
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.04);
+    margin-bottom: 25px;
+    border: 1px solid rgba(0,0,0,0.02);
+}
+
+.profile-card {
+    text-align: center;
+}
+
+.profile-pic {
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+    border: 6px solid white;
+    margin-top: -80px;
+    object-fit: cover;
+    background: #eee;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    margin-bottom: 15px;
+}
+
+.user-name {
+    margin: 0 0 5px 0;
+    color: #2C3E50;
+    font-size: 22px;
+}
+
+.user-email {
+    color: #7f8c8d;
+    font-size: 14px;
+    margin-top: 0;
+    margin-bottom: 25px;
+}
+
+.stats-container {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 25px;
+}
+
+.stat-box {
+    background: #F3F8F5;
+    padding: 15px;
+    border-radius: 12px;
+    text-align: center;
+    flex: 1;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    border: 1px solid transparent;
+}
+
+.stat-box:hover {
+    background: #E8F5E9;
+    border-color: #4A7C59;
+    transform: translateY(-3px);
+    cursor: pointer;
+}
+
+.stat-num {
+    font-size: 26px;
+    font-weight: 700;
+    color: #4A7C59;
+    display: block;
+}
+
+.stat-label {
+    font-size: 11px;
+    color: #555;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    font-weight: 600;
+}
+
+.logout-btn {
+    color: #e74c3c;
+    text-decoration: none;
+    font-weight: 600;
+    display: inline-block;
+    margin-top: 10px;
+    font-size: 14px;
+}
+.logout-btn:hover { text-decoration: underline; }
+
+
+.section-title {
+    margin-top: 0;
+    color: #2C3E50;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 15px;
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+.session-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 18px 0;
+    border-bottom: 1px solid #f5f5f5;
+}
+.session-item:last-child { border-bottom: none; }
+
+.doc-name { font-size: 16px; color: #333; margin-bottom: 4px; display: block; }
+.session-time { font-size: 13px; color: #888; }
+
+
+.badge { padding: 5px 10px; border-radius: 20px; font-size: 11px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px; }
+.badge-Pending { color: #d35400; background: #FFF3E0; }
+.badge-Confirmed { color: #00695c; background: #E0F2F1; }
+.badge-Cancelled { color: #c0392b; background: #FFEBEE; }
+
+.contact-btn {
+    margin-left: 10px;
+    color: #4A7C59;
+    background: #E8F5E9;
+    width: 30px; height: 30px;
+    border-radius: 50%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    transition: 0.2s;
+}
+.contact-btn:hover { background: #4A7C59; color: white; }
+
+/* Form Styles */
+label { display: block; margin-bottom: 8px; font-size: 13px; font-weight: 600; color: #444; }
+
+input[type="text"], input[type="email"], input[type="password"] {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 20px;
+    border: 2px solid #eee;
+    border-radius: 10px;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+    transition: 0.3s;
+}
+input:focus { border-color: #4A7C59; outline: none; background: white; }
+
+.btn-save {
+    background: #2C3E50;
+    color: white;
+    border: none;
+    padding: 14px 30px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 14px;
+    transition: 0.3s;
+}
+.btn-save:hover { background: #4A7C59; transform: translateY(-2px); box-shadow: 0 5px 15px rgba(74, 124, 89, 0.3); }
+
+.alert-box { padding: 15px; border-radius: 10px; margin-bottom: 20px; font-size: 14px; }
+.alert-success { background: #E8F5E9; color: #2E7D32; border: 1px solid #C8E6C9; }
+.alert-error { background: #FFEBEE; color: #C62828; border: 1px solid #FFCDD2; }
+
+@media(max-width: 768px) { .container { grid-template-columns: 1fr; margin-top: -30px; } }

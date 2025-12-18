@@ -71,6 +71,7 @@ try {
     }
 }
 ?>
+<script>alert("hello");</script>
 <!DOCTYPE html>
 <html lang="en">
 <head>

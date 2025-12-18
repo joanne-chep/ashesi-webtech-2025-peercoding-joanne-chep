@@ -1,0 +1,206 @@
+body {
+    background: #f0f2f5;
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+}
+
+.container {
+    max-width: 1000px;
+    margin: 40px auto;
+    padding: 0 20px;
+    min-height: 80vh;
+}
+
+.step {
+    display: none;
+}
+
+.step.active {
+    display: block;
+    animation: fadeIn 0.4s ease-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.section-title {
+    color: #050505;
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 5px;
+}
+
+.section-subtitle {
+    color: #65676B;
+    margin-top: 0;
+    margin-bottom: 30px;
+}
+
+.category-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+}
+
+.cat-card {
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    cursor: pointer;
+    transition: transform 0.2s;
+    border: 1px solid #ddd;
+}
+
+.cat-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+}
+
+.cat-img {
+    height: 180px;
+    background-size: cover;
+    background-position: center;
+}
+
+.cat-body {
+    padding: 20px;
+    text-align: center;
+}
+
+.therapist-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 25px;
+}
+
+.t-card {
+    background: white;
+    border-radius: 12px;
+    padding: 25px;
+    text-align: center;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    border: 1px solid #eee;
+    transition: 0.3s;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.t-card:hover {
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    border-color: #4A7C59;
+}
+
+.t-avatar {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid #f0f2f5;
+    margin-bottom: 15px;
+}
+
+.t-name {
+    font-size: 18px;
+    font-weight: 600;
+    color: #050505;
+    margin: 0;
+}
+
+.t-spec {
+    color: #4A7C59;
+    font-size: 13px;
+    font-weight: 500;
+    text-transform: uppercase;
+    margin: 5px 0 10px;
+}
+
+.t-bio {
+    font-size: 13px;
+    color: #65676B;
+    line-height: 1.5;
+    margin-bottom: 5px;
+    height: 60px;
+    overflow: hidden;
+}
+
+.t-bio.expanded {
+    height: auto;
+}
+
+.read-more-btn {
+    background: none;
+    border: none;
+    color: #4A7C59;
+    font-size: 12px;
+    font-weight: 600;
+    cursor: pointer;
+    padding: 0;
+    margin-bottom: 15px;
+    text-decoration: underline;
+}
+
+.t-price {
+    background: #e7f3ff;
+    color: #1877F2;
+    padding: 5px 12px;
+    border-radius: 20px;
+    font-weight: 700;
+    font-size: 14px;
+    margin-bottom: 15px;
+}
+
+.btn-select {
+    background: #4A7C59;
+    color: white;
+    border: none;
+    padding: 10px 25px;
+    border-radius: 6px;
+    font-weight: 600;
+    cursor: pointer;
+    width: 100%;
+    transition: 0.2s;
+}
+
+.btn-select:hover {
+    background: #3a6346;
+}
+
+.back-btn {
+    background: none;
+    border: none;
+    color: #65676B;
+    cursor: pointer;
+    font-size: 14px;
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+}
+
+.back-btn:hover {
+    color: #050505;
+    text-decoration: underline;
+}
+
+.confirm-box {
+    background: white;
+    padding: 30px;
+    border-radius: 12px;
+    border: 1px solid #ddd;
+    text-align: center;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+input[type="date"], select {
+    width: 100%;
+    padding: 15px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-family: inherit;
+    background: #f9f9f9;
+}
